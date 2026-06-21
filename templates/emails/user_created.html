@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Account Created - {{site_name}}</title>
+    <style>
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f4f7fa; color: #334155; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+        .wrapper { width: 100%; table-layout: fixed; background: #f4f7fa; padding-bottom: 40px; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 16px; margin-top: 40px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .header { background: #2563eb; padding: 32px; text-align: center; }
+        .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 800; }
+        .content { padding: 40px; }
+        .content h2 { color: #1e293b; margin-top: 0; font-size: 20px; font-weight: 700; }
+        .content p { line-height: 1.6; font-size: 16px; margin-bottom: 24px; }
+        .credentials { background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 12px; margin-bottom: 24px; }
+        .credentials-item { margin-bottom: 12px; font-size: 15px; }
+        .credentials-label { font-weight: 700; color: #64748b; display: inline-block; width: 100px; }
+        .credentials-value { color: #1e293b; font-family: monospace; font-size: 16px; }
+        .btn-container { text-align: center; margin: 32px 0; }
+        .btn { display: inline-block; background: #2563eb; color: #ffffff !important; padding: 14px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 16px; box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2); }
+        .footer { padding: 24px 40px; background: #f8fafc; text-align: center; border-top: 1px solid #e2e8f0; }
+        .footer p { margin: 0; font-size: 13px; color: #64748b; }
+        .warning { color: #b91c1c; font-size: 14px; margin-top: 24px; padding: 12px; background: #fef2f2; border-radius: 8px; border: 1px solid #fee2e2; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <h1>{{site_name}}</h1>
+            </div>
+            <div class="content">
+                <h2>Welcome, {{full_name}}!</h2>
+                <p>Your account has been successfully created by the administrator. You can now log in using the credentials below:</p>
+                
+                <div class="credentials">
+                    <div class="credentials-item">
+                        <span class="credentials-label">Email:</span>
+                        <span class="credentials-value">{{email}}</span>
+                    </div>
+                    <div class="credentials-item">
+                        <span class="credentials-label">Password:</span>
+                        <span class="credentials-value">{{password}}</span>
+                    </div>
+                </div>
+
+                <div class="btn-container" style="text-align: center; margin: 32px 0;">
+                    <a class="btn" href="{{login_link}}" style="display: inline-block; background: #2563eb; color: #ffffff !important; padding: 14px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 16px; box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);">Login to Your Account</a>
+                </div>
+
+                <div class="fallback-link" style="font-size: 12px; color: #94a3b8; word-break: break-all; margin-top: 24px; text-align: center;">
+                    If the button above doesn't work, copy and paste this URL into your browser:<br>
+                    <a href="{{login_link}}" style="color: #2563eb; text-decoration: underline;">{{login_link}}</a>
+                </div>
+
+                <div style="margin-top: 32px; padding: 15px; background-color: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px; font-size: 13px; color: #475569;">
+                    <strong>Mobile User Tip:</strong> If you are opening this link on your phone, make sure your phone is connected to the <strong>same Wi-Fi network</strong> as your desktop computer.
+                </div>
+
+                <div class="warning">
+                    <strong>Important:</strong> For security reasons, we recommend that you change your password immediately after your first login.
+                </div>
+            </div>
+            <div class="footer">
+                <p>&copy; {{year}} {{site_name}}. All rights reserved.</p>
+                <p>House Rental Management System</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
